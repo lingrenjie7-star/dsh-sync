@@ -1,0 +1,5 @@
+plugin-src/
+scripts/
+.github/
+.gitignore
+.npmignore
