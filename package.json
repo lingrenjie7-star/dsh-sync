@@ -1,0 +1,69 @@
+{
+  "name": "dsh-dntb",
+  "version": "1.0.1",
+  "description": "跨电脑同步：在两台电脑之间接续 DeepSeek Harness 与 WorkBuddy 的工作。逐项勾选工作区/对话，传到你自己的私有 GitHub 仓库。入口在 DSH 左侧边栏。",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "lingrenjie7-star"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "sync",
+    "cross-device",
+    "workbuddy",
+    "github"
+  ],
+  "homepage": "https://github.com/lingrenjie7-star/dsh-dntb#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lingrenjie7-star/dsh-dntb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lingrenjie7-star/dsh-dntb/issues"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-locale"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.1 <5.0.0 || >=4.0.2 <5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  }
+}
