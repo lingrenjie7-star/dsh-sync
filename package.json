@@ -1,6 +1,6 @@
 {
   "name": "dsh-dntb",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "跨电脑同步：在两台电脑之间接续 DeepSeek Harness 与 WorkBuddy 的工作。逐项勾选工作区/对话，传到你自己的私有 GitHub 仓库。入口在 DSH 左侧边栏。",
   "type": "module",
   "license": "MIT",
